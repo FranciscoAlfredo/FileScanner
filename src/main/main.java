@@ -16,15 +16,5 @@ public class main {
 	
 	public static void main(String[] args) {
 		
-		try (Stream<Path> walk = Files.walk(Paths.get(""))) {
-
-			List<String> result = walk.filter(Files::isRegularFile)
-					.map(x -> x.toString()).collect(Collectors.toList());
-
-			result.forEach(System.out::println);
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}	
 	}
 }
